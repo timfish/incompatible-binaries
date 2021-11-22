@@ -1,0 +1,29 @@
+{
+  "name": "incompatible-binaries",
+  "version": "0.0.1",
+  "description": "Lists or deletes binaries in a directory that aren't compatible with the supplied platform and architecture",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "keywords": [
+    "electron",
+    "forge",
+    "packager",
+    "binary"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "pretest": "yarn build",
+    "test": "cd test/forge && yarn && yarn package && cd .. && node test.js"
+  },
+  "author": "Tim Fish <tim@timfish.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "picomatch": "^2.3.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "binary-info": "^0.0.3",
+    "fdir": "^5.1.0"
+  }
+}
