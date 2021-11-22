@@ -1,7 +1,8 @@
 {
   "name": "incompatible-binaries",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lists or deletes binaries in a directory that aren't compatible with the supplied platform and architecture",
+  "repository": "git@github.com:timfish/incompatible-binaries.git",
   "main": "index.js",
   "types": "./index.d.ts",
   "keywords": [
