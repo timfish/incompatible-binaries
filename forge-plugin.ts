@@ -11,13 +11,8 @@ class IncompatibleBinaries {
 
   public init() {}
 
-  public getHook(hookName: string) {
-    switch (hookName) {
-      case "packageAfterPrune":
-        return this.packageAfterPrune;
-    }
-
-    return null;
+  public getHooks() {
+    return { packageAfterPrune: this.packageAfterPrune };
   }
 
   private packageAfterPrune = async (

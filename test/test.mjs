@@ -1,5 +1,5 @@
-const { fdir } = require("fdir");
-const assert = require("assert");
+import { fdir } from "fdir";
+import assert from "assert";
 
 const count = new fdir()
   .withFullPaths()

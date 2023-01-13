@@ -3,9 +3,9 @@ const IncompatibleBinaries = require("../../forge-plugin");
 module.exports = {
   packagerConfig: {},
   plugins: [
-    [
-      "@electron-forge/plugin-webpack",
-      {
+    {
+      name: "@electron-forge/plugin-webpack",
+      config: {
         mainConfig: "./webpack.main.config.js",
         renderer: {
           config: "./webpack.renderer.config.js",
@@ -18,7 +18,7 @@ module.exports = {
           ],
         },
       },
-    ],
+    },
     new IncompatibleBinaries(),
   ],
 };
