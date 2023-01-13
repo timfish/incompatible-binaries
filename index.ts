@@ -9,7 +9,7 @@ export function listIncompatibleBinaries(
 ): string[] {
   return new fdir()
     .withFullPaths()
-    .filter((path) => binary.isIncompatible(path, { platform, arch }))
+    .filter((path) => binary.isIncompatible(path, platform, arch))
     .crawl(basePath)
     .sync() as PathsOutput;
 }
